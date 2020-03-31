@@ -30,6 +30,7 @@ class ConfigPostProcessorTest extends TestCase
         yield 'non aliased service config' => ['NonAliasedServiceConfiguration.php'];
         yield 'abstract factories' => ['AbstractFactories.php'];
         yield 'lazy services' => ['LazyServices.php'];
+        yield 'service manager configuration' => ['FullServiceManagerConfiguration.php'];
     }
 
     /**
