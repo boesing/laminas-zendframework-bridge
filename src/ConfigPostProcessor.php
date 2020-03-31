@@ -355,6 +355,9 @@ class ConfigPostProcessor
         }
 
         foreach ($config['invokables'] as $alias => $target) {
+            if (!is_string($alias)) {
+                continue;
+            }
             $newTarget = $this->replacements->replace($target);
             $newAlias  = $this->replacements->replace($alias);
 
@@ -393,6 +396,10 @@ class ConfigPostProcessor
         }
 
         foreach ($config['factories'] as $service => $factory) {
+            if (!is_string($service)) {
+                continue;
+            }
+
             $replacedService = $this->replacements->replace($service);
             $factory         = is_string($factory) ? $this->replacements->replace($factory) : $factory;
             $config['factories'][$replacedService] = $factory;
