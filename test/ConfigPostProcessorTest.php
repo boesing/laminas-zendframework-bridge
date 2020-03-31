@@ -28,6 +28,8 @@ class ConfigPostProcessorTest extends TestCase
         yield 'ignore router config' => ['RouterConfig.php'];
         yield 'process invokable config' => ['InvokableConfig.php'];
         yield 'non aliased service config' => ['NonAliasedServiceConfiguration.php'];
+        yield 'abstract factories' => ['AbstractFactories.php'];
+        yield 'lazy services' => ['LazyServices.php'];
     }
 
     /**
